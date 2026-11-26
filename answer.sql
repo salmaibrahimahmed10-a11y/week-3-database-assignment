@@ -1,21 +1,28 @@
--- 1. Display payment details
-SELECT * FROM payments;
+USE sales
+USE sales;
 
--- 2. Orders with In Process status
-SELECT *
+-- Question 1: Retrieve Payment Information
+SELECT checkNumber, paymentDate, amount
+FROM payments;
+
+-- Question 2: Find Orders in Process
+SELECT orderDate, requiredDate, status
 FROM orders
-WHERE status = 'In Process';
+WHERE status = 'In Process'
+ORDER BY orderDate DESC;
 
--- 3. Sales representatives
-SELECT *
+-- Question 3: Find Sales Representatives
+SELECT firstName, lastName, email
 FROM employees
-WHERE jobTitle = 'Sales Rep';
+WHERE jobTitle = 'Sales Rep'
+ORDER BY employeeNumber DESC;
 
--- 4. Display all offices
-SELECT * FROM offices;
-
--- 5. Five cheapest products
+-- Question 4: Retrieve Office Information
 SELECT *
+FROM offices;
+
+-- Question 5: Retrieve the Five Cheapest Products
+SELECT productName, quantityInStock
 FROM products
 ORDER BY buyPrice ASC
 LIMIT 5;
