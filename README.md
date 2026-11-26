@@ -1,72 +1,72 @@
-\# School Management Database
+\# Week 3 Database Assignment
 
 
 
-\## Project Description
-
-This project demonstrates the creation and management of a School Management Database using MySQL.
+\## Question 1: Create the student table
 
 
 
-\## Database Name
+```sql
 
-school\_management
+CREATE TABLE student (
 
+&#x20;   id INT PRIMARY KEY,
 
+&#x20;   fullName VARCHAR(100),
 
-\## Table Created
+&#x20;   age INT
 
-\*\*students\*\*
+);
 
-
-
-The students table contains:
-
-\- student\_id
-
-\- first\_name
-
-\- last\_name
-
-\- email
-
-\- age
-
-\- enrollment\_date
+```
 
 
 
-\## SQL Operations
-
-The project demonstrates the following SQL commands:
+\## Question 2: Insert at least three records
 
 
 
-1\. CREATE DATABASE
+```sql
 
-2\. USE DATABASE
+INSERT INTO student (id, fullName, age)
 
-3\. CREATE TABLE
+VALUES
 
-4\. INSERT INTO
+(1, 'John', 18),
 
-5\. SELECT
+(2, 'Mary', 19),
 
+(3, 'Peter', 21);
 
-
-\## Tools Used
-
-\- MySQL
-
-\- MySQL Workbench
-
-\- Git Bash
-
-\- GitHub
+```
 
 
 
-\## Author
+\## Question 3: Update the age of student with ID 2 to 20
 
-Student Database Assignment
+
+
+```sql
+
+UPDATE student
+
+SET age = 20
+
+WHERE id = 2;
+
+```
+
+
+
+\## Verification
+
+
+
+```sql
+
+SELECT \* FROM student;
+
+```
+
+
 
