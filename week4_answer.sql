@@ -20,4 +20,8 @@ SELECT productCode,
        quantityOrdered,
        SUM(quantityOrdered * priceEach) AS total_price
 FROM orderdetails
-GROUP BY productCode, quantityOrdered;
+GROUP BY productCode, quantityOrdered;-- Question 4: Highest payment amount for each check number
+SELECT checkNumber,
+       MAX(amount) AS highest_amount
+FROM payments
+GROUP BY checkNumber;
